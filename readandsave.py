@@ -18,21 +18,16 @@ def on_connect(clnt, user, flags, rc):
     print("connected with rc:" + str(rc))
 
 def on_message(client, userdata, msg):
-    print('message function triggered!! hallelujah')
     global index
     global path
     f = np.frombuffer(msg.payload, dtype='uint8')
     img = cv2.imdecode(f, flags=1)
-    print('message received!', img.shape)
     name = 'face_%s.png'%str(index)
     index+=1
     cv2.imwrite(path+name, img)
 
 client = mqtt.Client()
-print('initialized client!')
 client.on_connect = on_connect
 client.connect(HOST, PORT, 60)
-print('connected to host!')
 client.on_message=on_message
-print('message function set!')
 client.loop_forever()
