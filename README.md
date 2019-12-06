@@ -1,6 +1,6 @@
 # W251
 
-The homework assignment required the creation of 3 containers in the JEtson and two containers on the IBM cloud. I was unable to accomplish the goal of storing captured images in the VM, however I did learn an extravegant amount throughout the process. Below are the containers required for this assignment. 
+The homework assignment required the creation of 3 containers in the Jetson and two containers in the IBM cloud. I was unable to accomplish the goal of storing captured images in the VM, however I did learn an extravegant amount throughout the process. Below are the containers required for this assignment. Attached are the python scripts created for this procedure. I belive my largest mistake was in connecting and storing the photos in the bucket. I am still not sure exactly where I made the mistake, however I am planning on worknig on this futher to try and correct my mistake. 
 
 ## Working on the Jetson
  network = jetsonbridge
@@ -49,7 +49,9 @@ CONTAINER ID        IMAGE               COMMAND
 
 097ec86ebad1        forwarder           "/bin/sh -c 'python …"   
 
-1740a8d47cc1        broker              "/bin/sh -c /usr/sbi…"   
+1740a8d47cc1        broker              "/bin/sh -c /usr/sbi…"  
+
+### Inspecting the network shows that the three containers are linked on the Jetson
 
 ## In the IBM Virtual Mahine
 ### Create a network cloudbridge
