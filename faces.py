@@ -28,11 +28,11 @@ while(True):
     for (x,y,w,h) in faces:
         face = frame[y:y+h, x:x+w]
 
-        print("\nFound a face!\nShape: ", face.shape, '\nType: ', face.dtype)
+        print("\Face found\nShape: ", face.shape, '\nType: ', face.dtype)
 
         rc,jpg = cv2.imencode('.png', face)
 
         msg = jpg.tobytes()
         client.publish(TOPIC, payload=msg, qos=0, retain=False)
-        print("Published Message!")
+        print("Message published")
 
