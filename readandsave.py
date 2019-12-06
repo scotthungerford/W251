@@ -3,10 +3,10 @@ import math
 import cv2
 
 import paho.mqtt.client as mqtt
-print('imports done!')
+print('completed')
 index = 0
 
-HOST="108.168.189.85"
+HOST="159.8.241.4"
 PORT=1883
 TOPIC="cloudfaces"
 
@@ -14,7 +14,7 @@ path = '/data/' #map directory to  /mnt/hw3bucket
 
 def on_connect(clnt, user, flags, rc):
     client.subscribe(TOPIC)
-    print('subscribed to topic!')
+    print('subscribed to topic')
     print("connected with rc:" + str(rc))
 
 def on_message(client, userdata, msg):
