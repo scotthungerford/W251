@@ -1,5 +1,7 @@
 # W251
 
+The homework assignment required the creation of 3 containers in the JEtson and two containers on the IBM cloud. I was unable to accomplish the goal of storing captured images in the VM, however I did learn an extravegant amount throughout the process. Below are the containers required for this assignment. 
+
 ## Working on the Jetson
  network = jetsonbridge
 ### Bridge for the containers
